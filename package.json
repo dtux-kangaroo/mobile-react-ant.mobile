@@ -1,7 +1,7 @@
 {
-  "name": "dtux-team",
-  "version": "1.2.2",
-  "description": "",
+  "name": "[[model.name]]",
+  "version": "[[model.version]]",
+  "description":"[[model.description]]",
   "scripts": {
     "build": "rimraf dist && webpack --progress --hide-modules --config webpack.config.js",
     "start": "node webpack.dev.config.js"
