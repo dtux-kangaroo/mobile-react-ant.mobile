@@ -28,6 +28,7 @@
     "jroll": "^2.5.0",
     "moment": "^2.19.3",
     "node-sass": "^4.7.2",
+    "postcss-write-svg": "^3.0.1",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
     "prop-types": "^15.6.0",

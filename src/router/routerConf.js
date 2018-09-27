@@ -1,4 +1,4 @@
-// import Loadable from 'react-loadable';
+import Loadable from 'react-loadable';
 // import Loading from 'components/loading';
 // import MainLayout  from 'layout/mainLayout';
 import BottomLayout from 'layout/bottomLayout';

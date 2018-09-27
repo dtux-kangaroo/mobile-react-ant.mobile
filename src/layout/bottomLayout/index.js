@@ -26,23 +26,13 @@ class CommonBottom extends Component{
             >
               Click to show/hide tab-bar
             </a>
-            <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-              onClick={(e) => {
-                e.preventDefault();
-                this.setState({
-                  fullScreen: !this.state.fullScreen,
-                });
-              }}
-            >
-              Click to switch fullscreen
-            </a>
           </div>
         );
     }
 
     render() {
         return (
-          <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
+          <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
             <TabBar
               unselectedTintColor="#949494"
               tintColor="#33A3F4"

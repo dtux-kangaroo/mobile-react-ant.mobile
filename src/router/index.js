@@ -17,13 +17,13 @@ function renderRouteConf(container, router, contextPath) {
     }
     if (routeItem.layout && routeItem.component) {
       routeChildren.push(
-        <CSSTransitionGroup
-            transitionName="normal"
-            transitionEnter={true}
-            transitionLeave={true}
-            transitionEnterTimeout={400}
-            transitionLeaveTimeout={400}
-        >
+        // <CSSTransitionGroup
+        //     transitionName="normal"
+        //     transitionEnter={true}
+        //     transitionLeave={true}
+        //     transitionEnterTimeout={400}
+        //     transitionLeaveTimeout={400}
+        // >
           <Route
             key={routePath}
             exact
@@ -36,19 +36,12 @@ function renderRouteConf(container, router, contextPath) {
               );
             }}
           />
-        </CSSTransitionGroup>
+        // </CSSTransitionGroup>
       );
     }else if(routeItem.redirect){
       routeChildren.push(<Redirect key={routeItem.path}  exact from={routeItem.path} to={routeItem.redirect}/>);
     }else if (routeContainer && routeItem.component) {
       routeChildren.push(
-        <CSSTransitionGroup
-            transitionName="normal"
-            transitionEnter={true}
-            transitionLeave={true}
-            transitionEnterTimeout={400}
-            transitionLeaveTimeout={400}
-        >
           <Route
             key={routePath}
             exact
@@ -61,24 +54,15 @@ function renderRouteConf(container, router, contextPath) {
               );
             }}
           />
-        </CSSTransitionGroup>
       );
     } else {
       routeChildren.push(
-        <CSSTransitionGroup
-            transitionName="normal"
-            transitionEnter={true}
-            transitionLeave={true}
-            transitionEnterTimeout={400}
-            transitionLeaveTimeout={400}
-        >
           <Route
             key={routePath}
             exact
             path={routePath}
             component={routeItem.component}
           />
-        </CSSTransitionGroup>
       );
     }
     if (Array.isArray(routeItem.children)) {
