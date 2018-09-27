@@ -1,0 +1,21 @@
+import React from 'react';
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux';
+import createHistory from 'history/createBrowserHistory'
+import Routers from './router'
+import "assets/styles/app.scss";
+import store from './store'
+export const history = createHistory();
+
+const render = Component =>
+    ReactDOM.render(
+      <Provider store={ store }>
+      <Component />
+      </Provider>,
+       document.getElementById('root')
+    )
+render(Routers)
+
+if(module.hot) {
+  module.hot.accept();
+}
