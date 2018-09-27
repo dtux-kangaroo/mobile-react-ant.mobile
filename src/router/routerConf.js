@@ -1,7 +1,8 @@
 import Loadable from 'react-loadable';
-// import Loading from 'components/loading';
-// import MainLayout  from 'layout/mainLayout';
+import Loading from 'components/load';
+import MainLayout  from 'layout/mainLayout';
 import BottomLayout from 'layout/bottomLayout';
+const Login=Loadable({loader:() => import('pages/login'),loading: Loading});
 // const Home = Loadable({loader: () => import('../pages/home'),loading: Loading});
 // const UserList = Loadable({loader: () => import('../pages/user/list'),loading: Loading});
 // const Page404 = Loadable({loader: () => import('../pages/error/404'),loading: Loading});
@@ -21,13 +22,18 @@ import BottomLayout from 'layout/bottomLayout';
 // const Websocker=Loadable({loader:() => import('../pages/websocker'),loading: Loading});
 // const FormSearch=Loadable({loader:() => import('../pages/formSearch'),loading: Loading});
 // const Analysis=Loadable({loader:() => import('../pages/analysis'),loading: Loading});
-// const Login=Loadable({loader:() => import('../pages/auth/login'),loading: Loading});
 // const Register=Loadable({loader:() => import('../pages/auth/register'),loading: Loading});
 const routerConf = [
   {
     path: '/',
     layout: null,
-    component: BottomLayout
+    // component: BottomLayout
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    layout: MainLayout,
+    component: Login
   }
 ]
 // const routerConf = [

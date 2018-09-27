@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavBar, Icon, List, Flex } from 'antd-mobile';
-import navData from '../../constants/nav.json'
 import { Link } from 'react-router-dom'
 import './style.scss'
 export default class Table extends React.Component {

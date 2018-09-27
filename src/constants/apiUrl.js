@@ -1,6 +1,6 @@
 export default {
-    getHomeInfo:`${ZJYYCONFIG.APIURL}/m/publishCent/queryPublishCentAllInfo.json`,
-    getItemList:``,
+    getHomeInfo:'',
+    getNavList:'./mock/nav.json',
     getExceptList:``,
     getSearchList:``,
     reqLogin:``,

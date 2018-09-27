@@ -51,7 +51,7 @@ const render = Component =>
 render(Routers)
 
 if (module.hot) {
-    module.hot.accept('./routers', () => {
+    module.hot.accept('../router', () => {
         const NextRootContainer = require('./routers').default
         render(NextRootContainer)
     })
