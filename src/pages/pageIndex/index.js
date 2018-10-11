@@ -1,6 +1,7 @@
 import React,{ Component, Fragment } from 'react'; 
 import { List, InputItem } from 'antd-mobile';
 import { createForm } from 'rc-form';
+import LeftDraw from 'components/leftDrawer';
 
 const isIPhone = new RegExp('\\biPhone\\b|\\biPod\\b', 'i').test(window.navigator.userAgent);
 let moneyKeyboardWrapProps;
@@ -23,6 +24,7 @@ class LoginCom extends Component{
         const { type } = this.state;
         return(
             <div>
+                <LeftDraw />
                 <List>
                     <InputItem
                         {...getFieldProps('password', {

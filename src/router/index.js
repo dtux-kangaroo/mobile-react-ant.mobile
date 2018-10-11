@@ -1,7 +1,6 @@
 import React from 'react';
 import routerConf from './routerConf';
-import { Router, Switch, Route,Redirect } from 'react-router-dom';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import {  Router, Switch, Route,Redirect } from 'react-router-dom';
  import createHistory from "history/createBrowserHistory";
 const history = createHistory();
 
@@ -17,52 +16,44 @@ function renderRouteConf(container, router, contextPath) {
     }
     if (routeItem.layout && routeItem.component) {
       routeChildren.push(
-        // <CSSTransitionGroup
-        //     transitionName="normal"
-        //     transitionEnter={true}
-        //     transitionLeave={true}
-        //     transitionEnterTimeout={400}
-        //     transitionLeaveTimeout={400}
-        // >
-          <Route
-            key={routePath}
-            exact
-            path={routePath}
-            render={(props) => {
-              return React.createElement(
-                routeItem.layout,
-                props,
-                React.createElement(routeItem.component, props)
-              );
-            }}
-          />
-        // </CSSTransitionGroup>
+        <Route
+          key={routePath}
+          exact
+          path={routePath}
+          render={(props) => {
+            return React.createElement(
+              routeItem.layout,
+              props,
+              React.createElement(routeItem.component, props)
+            );
+          }}
+        />
       );
     }else if(routeItem.redirect){
       routeChildren.push(<Redirect key={routeItem.path}  exact from={routeItem.path} to={routeItem.redirect}/>);
     }else if (routeContainer && routeItem.component) {
       routeChildren.push(
-          <Route
-            key={routePath}
-            exact
-            path={routePath}
-            render={(props) => {
-              return React.createElement(
-                routeContainer,
-                props,
-                React.createElement(routeItem.component, props)
-              );
-            }}
-          />
+        <Route
+          key={routePath}
+          exact
+          path={routePath}
+          render={(props) => {
+            return React.createElement(
+              routeContainer,
+              props,
+              React.createElement(routeItem.component, props)
+            );
+          }}
+        />
       );
     } else {
       routeChildren.push(
-          <Route
-            key={routePath}
-            exact
-            path={routePath}
-            component={routeItem.component}
-          />
+        <Route
+          key={routePath}
+          exact
+          path={routePath}
+          component={routeItem.component}
+        />
       );
     }
     if (Array.isArray(routeItem.children)) {
