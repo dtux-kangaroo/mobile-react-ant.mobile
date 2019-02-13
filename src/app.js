@@ -12,7 +12,7 @@ import { AppContainer } from 'react-hot-loader'
 import Routers from './routers'
 import createHistory from 'history/createBrowserHistory'
 import rootReducer from './reducers/index'
-import './public/assets/styles/app.scss'
+import 'assets/styles/app.scss'
 var FastClick = require('fastclick')
 
 //按模块导入lodash，可以有效减小vendor.js的大小
