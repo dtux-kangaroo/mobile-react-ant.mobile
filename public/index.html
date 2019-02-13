@@ -12,9 +12,13 @@
   <script src="./libs/flexible/index.min.js"></script>
   <script src="./libs/buryPoint.js"></script>
   <!-- <script src='./libs/encrypt.js'></script> -->
+ <%= htmlWebpackPlugin.options.assets.config %> 
 </head>
 <body>
   <div id="root"></div>
+<div class="dll">
+                  <%= htmlWebpackPlugin.options.assets.scripts %>
+             </div>
 </body>
 <script>
   document.body.style.overflowX = 'hidden';
