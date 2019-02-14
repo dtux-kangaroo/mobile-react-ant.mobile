@@ -18,6 +18,7 @@ class MainLayout extends Component{
         return(
             <div className="bg-contain">
                 {this.props.children}
+                dsff
             </div>
         )
     }

@@ -1,18 +1,22 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const serverConfig = require('./server.config');
 
 module.exports = (context) => {
   const { webpack } = context;
   return {
-    "server": {
-      "host": "127.0.0.1",
-      "port": 8989
+    server: {
+      "host": serverConfig.host,
+      "port": serverConfig.port
     },
-    "proxy": [{
-      "path": '/log/api/v2/**',
-      "target": 'http://log.dev.dtstack.net:81',
+    proxy: [{
+      "path": '/api/v1/**',
+      "target": 'http://172.16.8.194:8891',
       "changeOrigin": true
     }],
+    dll:{
+
+    },
     webpack: {
       entry: {},
       output: {},

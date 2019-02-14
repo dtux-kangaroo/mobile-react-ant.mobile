@@ -1,7 +1,8 @@
 import 'whatwg-fetch'
 import { reqHeader, authBeforeRes, authAfterRes } from './interceptor';
 import ProgressBar from '../components/progressBar';
-import {history}from '..';
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory();
 
 class Http {
   get(url, params) { 
