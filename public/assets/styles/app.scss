@@ -1,5 +1,8 @@
 /*全局css样式*/
 @import '../fonts/iconfont/iconfont.css';
+html {
+  font-size: 30px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +10,6 @@
 a {
     text-decoration: none;
 }
-*{
-// touch-action: none;
-// -webkit-backface-visibility:hidden;
-// -webkit-transform-style:preserve-3d;
-// -webkit-text-size-adjust:0;
-}
-
 
 /*隐藏文本*/
 .textOverflow-hidden {

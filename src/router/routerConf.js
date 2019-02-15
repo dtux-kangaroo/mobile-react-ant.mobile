@@ -1,31 +1,49 @@
 import Loadable from 'react-loadable';
 import Loading from 'components/load';
 import MainLayout from 'layout/mainLayout';
-import BottomLayout from 'layout/bottomLayout';
 
-const PageIndex = Loadable({
-  loader: () => import('pages/pageIndex'),
+const MainAnalyse = Loadable({
+  loader: () => import('pages/mainAnalyse'),
   loading: Loading
 });
-//const pageGoods=Loadable({loader:() => import('pages/pageGoods'),loading: Loading});
-//const pageShopping=Loadable({loader:() => import('pages/pageShopping'),loading: Loading});
-//const page404=Loadable({loader:() => import('pages/404'),loading: Loading});
+const GoodsAnalysis = Loadable({
+  loader: () => import('pages/goodsAnalysis'),
+  loading: Loading
+});
+const BrandAnalysis = Loadable({
+  loader: () => import('pages/brandAnalysis'),
+  loading: Loading
+});
+const MemberAnalysis = Loadable({
+  loader: () => import('pages/memberAnalysis'),
+  loading: Loading
+});
+
 const routerConf = [{
     path: '/',
     layout: null,
-    redirect: '/index'
+    redirect: '/main-analyse'
   },
   {
-    path: '/index',
+    path: '/main-analyse',
     layout: MainLayout,
-    component: PageIndex,
+    component: MainAnalyse,
+  },
+  {
+    path: '/brand-analyse',
+    layout: MainLayout,
+    component: BrandAnalysis
+  },
+  {
+    path: '/goods-analyse',
+    layout: MainLayout,
+    component: GoodsAnalysis
+  },
+  {
+    path: '/member-analyse',
+    layout: MainLayout,
+    component: MemberAnalysis
   }
-  //  
-  // {
-  //   path: '*',
-  //   layout: MainLayout,
-  //   component: page404,
-  // }
 ]
 
 export default routerConf;
