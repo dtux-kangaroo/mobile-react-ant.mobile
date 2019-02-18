@@ -1,5 +1,9 @@
 {
-    "name":"charlesYang",
-    "age":"31",
-    "fun":"play football"
+    "success": true,
+    "message": "执行成功~~",
+    "data": [
+        { "id": 1, "name": "test1" },
+        { "id": 2, "name": "test2" },
+        { "id": 3, "name": "test3" }
+    ]
 }

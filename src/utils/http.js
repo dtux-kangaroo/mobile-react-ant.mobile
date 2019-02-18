@@ -69,8 +69,10 @@ class Http {
       .then(authBeforeRes)
       .then(response => {
         ProgressBar.hide();
-        return response.json()
+        return response;
+        // return response.json()  // 以此方式报错 TypeError: response.json is not a function
       })
+      .then(authAfterRes)
       .catch(err => {
         console.error("错误信息：",JSON.stringify(err));
         this.handleExcept(e);//开发环境可讲此方法注视
