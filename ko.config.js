@@ -14,11 +14,11 @@ module.exports = (context) => {
       "target": 'http://172.16.8.194:8891',
       "changeOrigin": true
     }],
-    dll:{
-
-    },
+    dll:[],
     webpack: {
-      entry: {},
+      entry: {
+        index:path.resolve(__dirname,'src/index.tsx')
+      },
       output: {},
       module: {
         rules: []

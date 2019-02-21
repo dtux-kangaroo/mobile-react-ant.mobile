@@ -1,10 +1,11 @@
-import React from 'react';
+import * as React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux';
 import Routers from './router'
 import "assets/styles/index.scss";
 import store from './store'
 import "@babel/polyfill";
+
 interface AppProps{}
 interface AppStates{}
 

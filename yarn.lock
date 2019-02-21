@@ -4493,10 +4493,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-ko-script@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ko-script/-/ko-script-2.0.0.tgz#bced861fbef6c48c8ed459632f706bfc31c9ead9"
-  integrity sha512-+KgBzo78+w7kufYAcymxawr4L8CW0OXF9ZHUgmFQaj8M2ZM6i/VQ1wwbbLDA2qQs3xK4NngDhsny5xBFVG1HNg==
+ko-script@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ko-script/-/ko-script-2.1.2.tgz#e72d4a95b65bd0bdb8be9d65e221ce1d1d49b1d9"
+  integrity sha512-pjNufUYe5oQ5kp6+li8PdGnWbfIl9ToeXYoSxw6a4afPV4eGKu81L6J+rddNVz604vPpcl62B7w/11HQ/ZZHYQ==
   dependencies:
     "@babel/core" "^7.2.0"
     "@babel/plugin-proposal-class-properties" "7.2.1"

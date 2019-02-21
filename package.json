@@ -5,16 +5,16 @@
   "scripts": {
     "start": "npm run dev",
     "dll": "ko dll",
-    "dev": "ko dev",
-    "swagger":"ko swagger",
-    "build": "ko build",
+    "dev": "ko dev -t",
+    "swagger": "ko swagger",
+    "build": "ko build -t",
     "preview": "ko preview"
-
   },
   "author": "charlesYang",
   "license": "MIT",
   "dependencies": {
     "@antv/f2": "^3.3.5",
+    "axios": "^0.18.0",
     "history": "^4.7.2",
     "immutable": "^4.0.0-rc.12",
     "moment": "^2.24.0",
@@ -26,16 +26,21 @@
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.1",
-    "axios": "^0.18.0",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "antd-mobile": "^2.2.8",
     "@babel/polyfill": "^7.2.5",
+    "@types/node": "^11.9.4",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.1",
+    "@types/react-router-redux": "^5.0.18",
+    "@types/redux-actions": "^2.3.2",
+    "@types/redux-thunk": "^2.1.0",
+    "antd-mobile": "^2.2.8",
+    "copy-webpack-plugin": "^4.6.0",
     "fastclick": "^1.0.6",
     "jroll": "^2.6.5",
-    "copy-webpack-plugin": "^4.6.0",
-    "ko-script": "^2.0.0",
+    "ko-script": "^2.1.2",
     "mirror-creator": "^1.1.0",
     "prop-types": "^15.7.2",
     "react-transition-group": "^2.5.3",
@@ -43,12 +48,6 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "@types/node": "^11.9.4",
-    "@types/react": "^16.8.3",
-    "@types/react-dom": "^16.8.1",
-    "@types/react-router-redux": "^5.0.18",
-    "@types/redux-actions": "^2.3.2",
-    "@types/redux-thunk": "^2.1.0",
     "typescript": "^3.3.3"
   }
 }
