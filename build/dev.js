@@ -77,12 +77,13 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'], 
     alias: { 
-      assets: path.resolve(__dirname, '../public/assets'),
-      components: path.resolve(__dirname, '../src/components/'),
-      pages: path.resolve(__dirname, '../src/pages/'),
-      utils: path.resolve(__dirname, '../src/utils/'),
-      constants: path.resolve(__dirname, '../src/constants/'),
-      layout: path.resolve(__dirname, '../src/layout/')
+      '@':path.resolve(__dirname, '../src'),
+      'components': path.resolve(__dirname, '../src/components/'),
+      'pages': path.resolve(__dirname, '../src/pages/'),
+      'utils': path.resolve(__dirname, '../src/utils/'),
+      'constants': path.resolve(__dirname, '../src/constants/'),
+      'layouts': path.resolve(__dirname, '../src/layouts/'),
+      'assets': path.resolve(__dirname, '../public/assets')
     }
   },
   devServer: {
