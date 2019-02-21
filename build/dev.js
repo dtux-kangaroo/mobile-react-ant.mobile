@@ -68,16 +68,16 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new CopyWebpackPlugin([ 
-      {from: './public/config',to:"./conf"},
-      {from: './public/mock',to:"./mock"},
-      {from: './public/assets/libs',to:"./libs"},
-      {from: './public/assets/images',to:"./imgs"}
+      {from: path.resolve(__dirname,'../public/config'),to:path.join(buildPath,'/config')},
+      {from: path.resolve(__dirname,'../public/mock'),to:path.join(buildPath,'/mock')},
+      {from: path.resolve(__dirname,'../public/assets/libs'),to:path.join(buildPath,'/libs')},
+      {from: path.resolve(__dirname,'../public/assets/images'),to:path.join(buildPath,'/images')}
     ]),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'], 
     alias: { 
-      assets: path.resolve(__dirname, '../src/public/assets'),
+      assets: path.resolve(__dirname, '../public/assets'),
       components: path.resolve(__dirname, '../src/components/'),
       pages: path.resolve(__dirname, '../src/pages/'),
       utils: path.resolve(__dirname, '../src/utils/'),
@@ -87,7 +87,7 @@ module.exports = {
   },
   devServer: {
     host: '127.0.0.1',
-    port: '8989',
+    port: '8181',
     contentBase: buildPath,
     publicPath: "/",
     historyApiFallback: true,
