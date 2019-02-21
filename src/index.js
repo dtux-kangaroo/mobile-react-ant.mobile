@@ -1,21 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { Provider } from 'react-redux';
 import Routers from './router'
 import "assets/styles/index.scss";
 import store from './store'
 import "@babel/polyfill";
+interface AppProps{}
+interface AppStates{}
 
+class App extends React.Component<AppProps,AppStates> {
+    
+  constructor(props) {
+    super(props)
+  }
 
-const render = Component =>
-    ReactDOM.render(
+  render():JSX.Element{
+    return(
       <Provider store={ store }>
-      <Component />
-      </Provider>,
-       document.getElementById('root')
+        <Routers />
+      </Provider>
     )
-render(Routers)
-
-if(module.hot) {
-  module.hot.accept();
+  }
 }
+render(<App/>,document.getElementById('root'))
