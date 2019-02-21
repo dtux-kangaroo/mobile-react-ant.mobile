@@ -33,6 +33,7 @@ module.exports = {
         use: [
           "style-loader",
           "css-loader",
+          "postcss-loader",
           "less-loader?{modifyVars:"+JSON.stringify(theme)+"}"
         ],
       },
@@ -41,6 +42,7 @@ module.exports = {
         use: [
           "style-loader", //上面的简写方式
           "css-loader",
+          "postcss-loader",
           "sass-loader"
         ]
       },
