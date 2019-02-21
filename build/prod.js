@@ -33,6 +33,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
+          "postcss-loader",
           "less-loader?{modifyVars:" + JSON.stringify(theme) + "}"
         ],
       },
@@ -41,6 +42,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
+          "postcss-loader",
           "sass-loader"
         ]
       },
@@ -120,10 +122,10 @@ module.exports = {
       }
     }),
     new CopyWebpackPlugin([
-      {from: './public/config',to:"./conf"},
-      {from: './public/mock',to:"./mock"},
-      {from: './public/assets/libs',to:"./libs"},
-      {from: './public/assets/imgs',to:"./imgs"}
+      {from: path.resolve(__dirname,'../public/config'),to:path.join(buildPath,'/config')},
+      {from: path.resolve(__dirname,'../public/mock'),to:path.join(buildPath,'/mock')},
+      {from: path.resolve(__dirname,'../public/assets/libs'),to:path.join(buildPath,'/libs')},
+      {from: path.resolve(__dirname,'../public/assets/images'),to:path.join(buildPath,'/images')}
     ]),
     new webpack.DefinePlugin({
       __PRODUCTION: JSON.stringify(true)
@@ -132,12 +134,13 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'],
     alias: {
-      assets: path.resolve(__dirname, '../src/public/assets'),
-      components: path.resolve(__dirname, '../src/components/'),
-      pages: path.resolve(__dirname, '../src/pages/'),
-      utils: path.resolve(__dirname, '../src/utils/'),
-      constants: path.resolve(__dirname, '../src/constants/'),
-      layout: path.resolve(__dirname, '../src/layout/')
+      '@':path.resolve(__dirname, '../src'),
+      'components': path.resolve(__dirname, '../src/components/'),
+      'pages': path.resolve(__dirname, '../src/pages/'),
+      'utils': path.resolve(__dirname, '../src/utils/'),
+      'constants': path.resolve(__dirname, '../src/constants/'),
+      'layouts': path.resolve(__dirname, '../src/layouts/'),
+      'assets': path.resolve(__dirname, '../public/assets')
     }
   },
   externals:{
