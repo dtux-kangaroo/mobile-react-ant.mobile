@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory'
 import Routers from './router'
-import "assets/styles/index.scss";
+import "@/scss/index.scss";
 import store from './store'
 export const history = createHistory();
 
