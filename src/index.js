@@ -8,12 +8,12 @@ import store from './store'
 export const history = createHistory();
 
 const render = Component =>
-    ReactDOM.render(
-      <Provider store={ store }>
+  ReactDOM.render(
+    <Provider store={ store }>
       <Component />
-      </Provider>,
-       document.getElementById('root')
-    )
+    </Provider>,
+    document.getElementById('root')
+  )
 render(Routers)
 
 if(module.hot) {

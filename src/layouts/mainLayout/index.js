@@ -1,12 +1,12 @@
 import React,{ Component } from 'react'; 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import * as global from "pages/global/action";
+import * as actions from "@/store/actions";
 import './style.scss';
 
 @connect(
     state => ({ ...state.global }),
-    dispatch => bindActionCreators({ ...global }, dispatch)
+    dispatch => bindActionCreators({ ...actions }, dispatch)
 )
 class MainLayout extends Component{
     constructor(props){
