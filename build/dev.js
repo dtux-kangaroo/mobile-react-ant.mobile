@@ -99,7 +99,7 @@ module.exports = {
     hot: true,
     inline:true,
     proxy: [{
-      path: '/log/api/v2/**',
+      path: '/api',
       target: 'http://log.dev.dtstack.net:81',
       changeOrigin: true
     }]
