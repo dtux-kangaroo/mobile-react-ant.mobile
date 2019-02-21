@@ -16,22 +16,11 @@ class MainLayout extends Component{
     super(props)
   }
 
-  returnPage = () => {
-    this.props.history.goBack();      
-  }
-
   render(){
     const { pathname }=this.props.location;
     return(
       <div className="main-layout">
         <div className="container">
-          {/* <NavBar
-            mode="dark"
-            icon={<Icon type="left" />}
-            leftContent={<span>返回</span>}
-            onLeftClick={this.returnPage}
-            style={{backgroundColor: '#D84036'}}
-            >业务宏观看板</NavBar> */}
           {this.props.children}               
         </div>
         <div className="footer_nav">
