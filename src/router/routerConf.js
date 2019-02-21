@@ -1,7 +1,7 @@
 import Loadable from 'react-loadable';
 import Loading from 'components/load';
-import MainLayout  from 'layout/mainLayout';
-import BottomLayout from 'layout/bottomLayout';
+import MainLayout  from 'layouts/mainLayout';
+import BottomLayout from 'layouts/bottomLayout';
 
 const pageIndex=Loadable({loader:() => import('pages/pageIndex'),loading: Loading});
 const pageGoods=Loadable({loader:() => import('pages/pageGoods'),loading: Loading});
