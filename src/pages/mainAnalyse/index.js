@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { API } from "@/api/index.js";
+import { API } from "@/api/index";
 
 class MainAnalyse extends Component{
   constructor(props){
