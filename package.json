@@ -6,8 +6,9 @@
     "start": "npm run dev",
     "dll": "ko dll",
     "dev": "ko dev -t",
-    "swagger": "ko swagger",
+    "swagger": "ko swagger -t",
     "build": "ko build -t",
+    "tslint": "tslint --project . src/**/*.ts src/**/*.tsx",
     "preview": "ko preview"
   },
   "author": "charlesYang",
@@ -48,6 +49,7 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
+    "tslint": "^5.15.0",
     "typescript": "^3.3.3"
   }
 }
